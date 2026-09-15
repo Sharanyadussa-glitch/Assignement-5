@@ -1,15 +1,22 @@
-body {
-  min-width: 320px;
-}
+* { box-sizing: border-box; }
 
+body { margin: 0; }
+
+/* Flexbox makes the three rows of the large layout. */
 .container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 20px;
-  width: 100%;
-  height: 100vh;
-  padding: 20px;
+  width: 1152px;
+  height: 700px;
+  padding: 90px 98px;
   background-color: #370617;
+
+}
+
+.row {
+  display: flex;
+  gap: 12px;
 }
 
 .item {
@@ -24,62 +31,42 @@ body {
 .box {
   flex: 0 0 auto;
   width: 78px;
-  min-height: 78px;
+  height: 78px;
   border-radius: 4px;
   background-color: #9d0208;
 }
 
-.item1 {
-  justify-content: flex-start;
-  align-items: flex-end;
-  gap: 20px;
-}
-
-.item2 {
-  justify-content: center;
-  align-items: stretch;
-  gap: 20px;
-}
-
-.item3 {
-  justify-content: flex-end;
-  align-items: center;
-  gap: 20px;
-}
+/* Each panel uses a different Flexbox alignment. */
+.item1 { align-items: center; gap: 20px; }
+.item2 { justify-content: center; align-items: center; gap: 20px; }
+.item3 { justify-content: flex-end; align-items: center; gap: 20px; }
 
 .item4 {
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column;
 }
 
-.third-box {
-  align-self: flex-end;
+.top-boxes,
+.bottom-box { display: flex; }
+
+.top-boxes { gap: 96px; }
+.bottom-box {
+  justify-content: flex-end;
+  /* The reference places this box 42px below the panel's top edge. */
+  margin-top: -36px;
 }
 
-.item5 {
-  justify-content: center;
-  align-items: baseline;
-  gap: 54px;
-  color: #ffffff;
-}
+.item5 { justify-content: center; align-items: center; gap: 54px; }
 
 .item5 .box {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 118px;
+  height: 118px;
+  color: #FFFFFF;
   font: 12px Arial, sans-serif;
 }
 
-.item5 .box:nth-child(2) {
-  min-height: 64px;
-}
+.item5 .box:nth-child(2) { height: 64px; }
 
-.item6 {
-  align-items: center;
-  gap: 20px;
-}
-
-.wide-box {
-  flex-grow: 1;
-}
+.item6 { justify-content: center; align-items: center; gap: 20px; }
+.wide-box { width: 154px; }
