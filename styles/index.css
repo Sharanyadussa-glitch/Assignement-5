@@ -44,7 +44,8 @@
 }
 
 .item4 {
-  gap: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .item4 .box:nth-child(3) {
