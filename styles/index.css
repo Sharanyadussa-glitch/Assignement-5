@@ -60,6 +60,7 @@ body {
   justify-content: center;
   align-items: baseline;
   gap: 54px;
+  color: #ffffff;
 }
 
 .item5 .box {
@@ -67,7 +68,6 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 118px;
-  color: white;
   font: 12px Arial, sans-serif;
 }
 
